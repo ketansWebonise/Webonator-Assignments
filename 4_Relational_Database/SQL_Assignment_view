@@ -1,0 +1,15 @@
+DELIMITER #
+CREATE PROCEDURE get_scores_of(user_id IN int)
+BEGIN
+DECLARE x;
+
+CREATE OR REPLACE view V as select u.id,u.name,u.email,sum(am.answer_flag) as score from assesment_mappings as am, users as u where am.assessment_id IN(select distinct assessment_id from assesment_mappings where id IN (select distinct access_map_d from given_assessments where user_id = user)) group by assessment_id;
+
+PREPARE stmt from 'select * from V';
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;
+
+END#
+DELIMITER ;
+
+

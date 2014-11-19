@@ -1,0 +1,19 @@
+DELIMITER #
+create procedure get_assessment_detail(ass_id IN int)
+
+BEGIN
+DECLARE no_of_ques INT DEFAULT 0;
+DECLARE x INT;
+DECLARE query VARCHAR(255);
+
+SET no_of_ques = select count(id) from assesmentmappings where assessment_id = ass_id;
+SET query = 'select users.id, users.name,';
+SET x=1;
+	WHILE x <= no_of_ques
+	SET query = CONCAT(query,'CASE WHEN user_id = ??? THEN given_assessments.user_answer ELSE NULL END) as question',x,' ,');
+	END WHILE;
+
+SET query = CONCAT(query,'from users,given_assessments where assess_map_id IN (select id from assesment_mappings where assessment_id=))',ass_id,') group by given_assessments user_id');
+ 
+END#
+DELIMITER ;

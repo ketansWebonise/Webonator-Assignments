@@ -1,0 +1,11 @@
+My Views about mongoDB:
+
+Pros:
+- Working with mongoDB provides with great amount of flexibility as there is no fixed structure of a collection.
+- The attributes may have a complex structure, having fields representing any other entity rather than just attribute. So no need to make mapping tables/collections in many cases.
+- Architechture designing is much more convenient as it do not limit us by dependency or reference issues.
+- A wide range of functionalities given with nice and easy documentation available on internet.
+
+Cons:
+- Syntax is quite different from DBMSs previously dealt with. Mapping the analogy of many clauses is a bit difficult.
+- complex search are a bit trickier as compared to SQL as inner query use is much simpler and well defined as compared to dealing with variables and aggregations in MongoDB.

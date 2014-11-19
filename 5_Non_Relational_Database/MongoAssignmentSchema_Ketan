@@ -1,0 +1,73 @@
+/*below is the sam*/
+/*-------- collection containing user 'Documents' and the assessments given by them---------*/
+
+db.users.insert(
+{
+_id: ObjectID
+name: 'ketan',
+email:'ketan.1806@gmail.com',
+is_admin_user: false,
+password: 'mongoRocks',
+given_assessments: [
+
+	{
+	assmt_id: 'Object id_of_assmt1'
+	date_given: DATE
+	answer_given: [ans_id_1,ans_id_2,ans_id_3...]
+	score: MarksScored
+	status: pass/fail
+	},
+	{
+	assmt_id: 'Object id of assmt2'
+	date_given: DATE
+	answer_given: [ans_id_1,ans_id_2,ans_id_3....]
+	score: MarksScored
+	status: pass/fail
+	},
+	{
+	assmt_id: 'Object id of assmt3'
+	date_given: DATE
+	answer_given: [ans_id_1,ans_id_2,ans_id_3...]
+	score: MarksScored
+	status: pass/fail
+	}
+  ]
+}
+);
+
+/*-------- collection containing available assessment to give---------*/
+
+db.assessments.insert(
+{
+_id: ObjectID
+exam_title: 'Maths'
+max_marks: 100
+min_marks: 35
+questions: [ques_id_1,ques_id_2,ques_id_3....]		//Object IDs of question Documents
+duration_in_mins: 60
+}
+);
+
+/*---colletion containing questions to be asked in any assessment----*/
+
+db.questions.insert(
+{
+_id: ObjectID
+content: 'textual question/URL for pictorial question',
+is_pictorial_ques: true/false,
+options: [answer_id_1,answer_id_2,answer_id_3...]
+correct_option: [ans_id, ans_id...]			//multiple correct answers
+
+}
+);
+
+
+/*---colletion containing answers to be put as option for any question----*/
+
+db.answers.insert(
+{
+_id: ObjectID
+content: 'textual answer/URL for pictorial answer',
+is_pictorial: true/false,
+}
+

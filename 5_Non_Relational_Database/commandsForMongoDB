@@ -1,0 +1,608 @@
+QUERIES RUN FOR MONGO DB ASSIGNMENT:
+
+
+webonise@weboniselab:~$ mongo
+MongoDB shell version: 2.6.5
+connecting to: test
+> use assessment
+switched to db assessment
+> db.assessment.find().pretty()
+> db.users.find().pretty()
+> 
+> ;
+> db.test.find({"name":"ketan"}).pretty()
+{
+	"_id" : ObjectId("546654053981562a79dbea32"),
+	"name" : "ketan",
+	"email" : "ketan.1806@gmail.com"
+}
+> db.users.find().pretty()
+> show collections
+answers
+system.indexes
+test
+> db.answers.find().pretty()
+{
+	"_id" : ObjectId("5467350eb9f79d3cca3de265"),
+	"id" : "1001",
+	"content" : "Delhi",
+	"is_pictorial" : "true"
+}
+{
+	"_id" : ObjectId("54673520b9f79d3cca3de266"),
+	"id" : "1002",
+	"content" : "Mumbai",
+	"is_pictorial" : "false"
+}
+{
+	"_id" : ObjectId("54673538b9f79d3cca3de267"),
+	"id" : "1003",
+	"content" : "Pune",
+	"is_pictorial" : "false"
+}
+{
+	"_id" : ObjectId("54673546b9f79d3cca3de268"),
+	"id" : "1004",
+	"content" : "Indore",
+	"is_pictorial" : "false"
+}
+{
+	"_id" : ObjectId("54674b86b9f79d3cca3de269"),
+	"id" : "1005",
+	"content" : "Narendra Modi",
+	"is_pictorial" : "false"
+}
+{
+	"_id" : ObjectId("54674b9cb9f79d3cca3de26a"),
+	"id" : "1006",
+	"content" : "Manmohan Singh",
+	"is_pictorial" : "false"
+}
+{
+	"_id" : ObjectId("54674bb6b9f79d3cca3de26b"),
+	"id" : "1007",
+	"content" : "Barack Obama",
+	"is_pictorial" : "false"
+}
+{
+	"_id" : ObjectId("54674c02b9f79d3cca3de26c"),
+	"id" : "1008",
+	"content" : "bradd pitt",
+	"is_pictorial" : "false"
+}
+{
+	"_id" : ObjectId("54674c2bb9f79d3cca3de26d"),
+	"id" : "1009",
+	"content" : "Viral Kohli",
+	"is_pictorial" : "false"
+}
+{
+	"_id" : ObjectId("54674c3fb9f79d3cca3de26e"),
+	"id" : "1010",
+	"content" : "MS Dhoni",
+	"is_pictorial" : "false"
+}
+{
+	"_id" : ObjectId("54674ca2b9f79d3cca3de26f"),
+	"id" : "1011",
+	"content" : "Virendra Sehwag",
+	"is_pictorial" : "false"
+}
+{
+	"_id" : ObjectId("54674cb5b9f79d3cca3de270"),
+	"id" : "1012",
+	"content" : "Wasim Akram",
+	"is_pictorial" : "false"
+}
+{
+	"_id" : ObjectId("54674d46b9f79d3cca3de271"),
+	"id" : "1013",
+	"content" : "www.xyz.com/addr_of_image",
+	"is_pictorial" : "true"
+}
+{
+	"_id" : ObjectId("54674d59b9f79d3cca3de272"),
+	"id" : "1014",
+	"content" : "www.xyz.com/addr_of_image3434",
+	"is_pictorial" : "true"
+}
+{
+	"_id" : ObjectId("54674d67b9f79d3cca3de273"),
+	"id" : "1015",
+	"content" : "www.xyz.com/addr_of_image3454",
+	"is_pictorial" : "true"
+}
+{
+	"_id" : ObjectId("54674d75b9f79d3cca3de274"),
+	"id" : "1016",
+	"content" : "www.xyz.com/addr_of_image3458",
+	"is_pictorial" : "true"
+}
+> db.questions.insert(id:"2001",content:"what is the capital of India",is_pictorial:false, options:["1001","1002","1003","1004"], correct_option: ["1001"])
+2014-11-17T18:19:32.700+0530 SyntaxError: Unexpected token :
+> db.questions.insert(id:"2001", content:"what is the capital of India",is_pictorial:false, options:["1001","1002","1003","1004"], correct_option: ["1001"])
+2014-11-17T18:20:09.138+0530 SyntaxError: Unexpected token :
+> db.questions.insert({id:"2001", content:"what is the capital of India",is_pictorial:false, options:["1001","1002","1003","1004"], correct_option: ["1001"]})
+WriteResult({ "nInserted" : 1 })
+> db.questions.insert({id:"2002", content:"who is the PM of India",is_pictorial:false, options:["1005","1006","1007","1008"], correct_option: ["1005"]})
+WriteResult({ "nInserted" : 1 })
+> db.questions.insert({id:"2003", content:"Who is captain of Indian Cricket Team",is_pictorial:false, options:["1009","1010","1011","1012"], correct_option: ["1010"]})
+WriteResult({ "nInserted" : 1 })
+> db.questions.find().pretty()
+{
+	"_id" : ObjectId("5469ef27dcd191009c086941"),
+	"id" : "2001",
+	"content" : "what is the capital of India",
+	"is_pictorial" : false,
+	"options" : [
+		"1001",
+		"1002",
+		"1003",
+		"1004"
+	],
+	"correct_option" : [
+		"1001"
+	]
+}
+{
+	"_id" : ObjectId("5469ef60dcd191009c086942"),
+	"id" : "2002",
+	"content" : "who is the PM of India",
+	"is_pictorial" : false,
+	"options" : [
+		"1005",
+		"1006",
+		"1007",
+		"1008"
+	],
+	"correct_option" : [
+		"1005"
+	]
+}
+{
+	"_id" : ObjectId("5469efbbdcd191009c086943"),
+	"id" : "2003",
+	"content" : "Who is captain of Indian Cricket Team",
+	"is_pictorial" : false,
+	"options" : [
+		"1009",
+		"1010",
+		"1011",
+		"1012"
+	],
+	"correct_option" : [
+		"1010"
+	]
+}
+> db.questions.insert({id:"2004", content:"www.pictureRepository.com/id=9923",is_pictorial:true, options:["1013","1014","1015","1016"], correct_option: ["1015"]})
+WriteResult({ "nInserted" : 1 })
+> db.questions.insert({id:"2005", content:"www.pictureRepository.com/id=9453",is_pictorial:true, options:["1013","1014","1015","1016"], correct_option: ["1014"]})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2017",content:"13",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2018",content:"35",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2019",content:"44",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2020",content:"39",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2021",content:"True",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2022",content:"False",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2023",content:"mc^2",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2023",content:"mc^4",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2025",content:"log(mc)",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2026",content:"log(mc^2)",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2027",content:"NaCl",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2028",content:"h2SO4",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2029",content:"HCl",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.answers.insert({id:"2030",content:"CaCO(OH)",is_pictorial: "false"})
+WriteResult({ "nInserted" : 1 })
+> db.questions.insert({id:"2006", content:"Evaluate : 13 log(e)^2",is_pictorial:false, options:["1017","1018","1019","1020"], correct_option: ["1018"]})
+WriteResult({ "nInserted" : 1 })
+> db.questions.insert({id:"2007", content:"Michigan is not a part of USA",is_pictorial:false, options:["1021","1022"], correct_option: ["1022"]})
+WriteResult({ "nInserted" : 1 })
+> db.questions.insert({id:"2008", content:"chemical formula for general salt is:",is_pictorial:false, options:["1023","1024","1025","1026"], correct_option: ["1023"]})
+WriteResult({ "nInserted" : 1 })
+> db.questions.insert({id:"2009", content:"chemical formula for general salt is:",is_pictorial:false, options:["1027","1028","1029","1030"], correct_option: ["1023"]})
+WriteResult({ "nInserted" : 1 })
+> db.questions.update({id:2008}{$set:{content: "e(Energy)= ___ according to einstien"}})
+2014-11-17T18:56:27.307+0530 SyntaxError: Unexpected token {
+> db.questions.update({id:2008}{$set:{content: "e(Energy)= ___ according to einstien"}}})
+2014-11-17T18:57:11.402+0530 SyntaxError: Unexpected token {
+> db.questions.update({id:2008}{$set:{content: "e(Energy)= ___ according to einstien"}})
+2014-11-17T18:57:30.482+0530 SyntaxError: Unexpected token {
+> db.questions.update({'id':'2008'}{$set:{'content': 'e(Energy)= ___ according to einstien'}})
+2014-11-17T18:58:52.890+0530 SyntaxError: Unexpected token {
+> db.questions.update({'id':'2008'},{$set:{'content': 'e(Energy)= ___ according to einstien'}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.questions.find.pretty();
+2014-11-17T18:59:57.113+0530 TypeError: Object function ( query , fields , limit , skip, batchSize, options ){
+    var cursor = new DBQuery( this._mongo , this._db , this ,
+                        this._fullName , this._massageObject( query ) , fields , limit , skip , batchSize , options || this.getQueryOptions() );
+
+    var connObj = this.getMongo();
+    var readPrefMode = connObj.getReadPrefMode();
+    if (readPrefMode != null) {
+        cursor.readPref(readPrefMode, connObj.getReadPrefTagSet());
+    }
+
+    return cursor;
+} has no method 'pretty'
+> db.questions.find().pretty();
+{
+	"_id" : ObjectId("5469ef27dcd191009c086941"),
+	"id" : "2001",
+	"content" : "what is the capital of India",
+	"is_pictorial" : false,
+	"options" : [
+		"1001",
+		"1002",
+		"1003",
+		"1004"
+	],
+	"correct_option" : [
+		"1001"
+	]
+}
+{
+	"_id" : ObjectId("5469ef60dcd191009c086942"),
+	"id" : "2002",
+	"content" : "who is the PM of India",
+	"is_pictorial" : false,
+	"options" : [
+		"1005",
+		"1006",
+		"1007",
+		"1008"
+	],
+	"correct_option" : [
+		"1005"
+	]
+}
+{
+	"_id" : ObjectId("5469efbbdcd191009c086943"),
+	"id" : "2003",
+	"content" : "Who is captain of Indian Cricket Team",
+	"is_pictorial" : false,
+	"options" : [
+		"1009",
+		"1010",
+		"1011",
+		"1012"
+	],
+	"correct_option" : [
+		"1010"
+	]
+}
+{
+	"_id" : ObjectId("5469f086dcd191009c086944"),
+	"id" : "2004",
+	"content" : "www.pictureRepository.com/id=9923",
+	"is_pictorial" : true,
+	"options" : [
+		"1013",
+		"1014",
+		"1015",
+		"1016"
+	],
+	"correct_option" : [
+		"1015"
+	]
+}
+{
+	"_id" : ObjectId("5469f13cdcd191009c086945"),
+	"id" : "2005",
+	"content" : "www.pictureRepository.com/id=9453",
+	"is_pictorial" : true,
+	"options" : [
+		"1013",
+		"1014",
+		"1015",
+		"1016"
+	],
+	"correct_option" : [
+		"1014"
+	]
+}
+{
+	"_id" : ObjectId("5469f55fdcd191009c086954"),
+	"id" : "2006",
+	"content" : "Evaluate : 13 log(e)^2",
+	"is_pictorial" : false,
+	"options" : [
+		"1017",
+		"1018",
+		"1019",
+		"1020"
+	],
+	"correct_option" : [
+		"1018"
+	]
+}
+{
+	"_id" : ObjectId("5469f5cadcd191009c086955"),
+	"id" : "2007",
+	"content" : "Michigan is not a part of USA",
+	"is_pictorial" : false,
+	"options" : [
+		"1021",
+		"1022"
+	],
+	"correct_option" : [
+		"1022"
+	]
+}
+{
+	"_id" : ObjectId("5469f617dcd191009c086956"),
+	"id" : "2008",
+	"content" : "e(Energy)= ___ according to einstien",
+	"is_pictorial" : false,
+	"options" : [
+		"1023",
+		"1024",
+		"1025",
+		"1026"
+	],
+	"correct_option" : [
+		"1023"
+	]
+}
+{
+	"_id" : ObjectId("5469f659dcd191009c086957"),
+	"id" : "2009",
+	"content" : "chemical formula for general salt is:",
+	"is_pictorial" : false,
+	"options" : [
+		"1027",
+		"1028",
+		"1029",
+		"1030"
+	],
+	"correct_option" : [
+		"1023"
+	]
+}
+> ^C
+bye
+webonise@weboniselab:~$ ^C
+webonise@weboniselab:~$ ^C
+webonise@weboniselab:~$ mongo
+MongoDB shell version: 2.6.5
+connecting to: test
+> use assessment
+switched to db assessment
+> show collections
+
+> show collections
+answers
+assesment_avail
+questions
+system.indexes
+test
+users
+> db.test.drop()
+true
+> show collections
+answers
+assesment_avail
+questions
+system.indexes
+users
+> db.users.find({"name":"ketan"})
+{ "_id" : ObjectId("546a064d449fc026a87fdb2b"), "id" : "4001", "name" : "ketan", "email" : "ketan.1806@gmail.com", "is_admin_user" : false, "password" : "mongoRocks", "given_assessments" : [ { "assmt_id" : "3002", "date_given" : "02/10/2014", "answer_given" : [ "1019", "1023", "1027" ], "score" : 33, "status" : "pass" }, { "assmt_id" : "3001", "date_given" : "04/10/2014", "answer_given" : [ "1001", "1005", "1009", "1016" ], "score" : 50, "status" : "pass" } ] }
+> db.users.find({"name":"ketan"}).pretty()
+{
+	"_id" : ObjectId("546a064d449fc026a87fdb2b"),
+	"id" : "4001",
+	"name" : "ketan",
+	"email" : "ketan.1806@gmail.com",
+	"is_admin_user" : false,
+	"password" : "mongoRocks",
+	"given_assessments" : [
+		{
+			"assmt_id" : "3002",
+			"date_given" : "02/10/2014",
+			"answer_given" : [
+				"1019",
+				"1023",
+				"1027"
+			],
+			"score" : 33,
+			"status" : "pass"
+		},
+		{
+			"assmt_id" : "3001",
+			"date_given" : "04/10/2014",
+			"answer_given" : [
+				"1001",
+				"1005",
+				"1009",
+				"1016"
+			],
+			"score" : 50,
+			"status" : "pass"
+		}
+	]
+
+> db.users.find().pretty()
+{
+	"_id" : ObjectId("546a064d449fc026a87fdb2b"),
+	"id" : "4001",
+	"name" : "ketan",
+	"email" : "ketan.1806@gmail.com",
+	"is_admin_user" : false,
+	"password" : "mongoRocks",
+	"given_assessments" : [
+		{
+			"assmt_id" : "3002",
+			"date_given" : "02/10/2014",
+			"answer_given" : [
+				"1019",
+				"1023",
+				"1027"
+			],
+			"score" : 33,
+			"status" : "pass"
+		},
+		{
+			"assmt_id" : "3001",
+			"date_given" : "04/10/2014",
+			"answer_given" : [
+				"1001",
+				"1005",
+				"1009",
+				"1016"
+			],
+			"score" : 50,
+			"status" : "pass"
+		}
+	]
+}
+{
+	"_id" : ObjectId("546a06d6449fc026a87fdb2c"),
+	"id" : "4002",
+	"name" : "mohit",
+	"email" : "mohit.06@gmail.com",
+	"is_admin_user" : false,
+	"password" : "mongoSucks",
+	"given_assessments" : [
+		{
+			"assmt_id" : "3002",
+			"date_given" : "03/10/2014",
+			"answer_given" : [
+				"1020",
+				"1024",
+				"1028"
+			],
+			"score" : 50,
+			"status" : "pass"
+		},
+		{
+			"assmt_id" : "3001",
+			"date_given" : "05/10/2014",
+			"answer_given" : [
+				"1003",
+				"1006",
+				"1008",
+				"1016"
+			],
+			"score" : 25,
+			"status" : "fail"
+		}
+	]
+}
+{
+	"_id" : ObjectId("546a0766449fc026a87fdb2d"),
+	"id" : "4003",
+	"name" : "vinay",
+	"email" : "vinay.ch@gmail.com",
+	"is_admin_user" : false,
+	"password" : "WhatIsMongo",
+	"given_assessments" : [
+		{
+			"assmt_id" : "3002",
+			"date_given" : "03/10/2014",
+			"answer_given" : [
+				"1020",
+				"1022",
+				"1028"
+			],
+			"score" : 0,
+			"status" : "fail"
+		},
+		{
+			"assmt_id" : "3001",
+			"date_given" : "05/10/2014",
+			"answer_given" : [
+				"1003",
+				"1006",
+				"1008",
+				"1016"
+			],
+			"score" : 25,
+			"status" : "fail"
+		}
+	]
+}
+> db.questions.find({"id":"2008"})
+{ "_id" : ObjectId("5469f617dcd191009c086956"), "id" : "2008", "content" : "e(Energy)= ___ according to einstien", "is_pictorial" : false, "options" : [ "1023", "1024", "1025", "1026" ], "correct_option" : [ "1023" ] }
+> db.users.find({"name":"mohit"},{name: 1,given_assessments: 0}).pretty()
+error: {
+	"$err" : "Can't canonicalize query: BadValue Projection cannot have a mix of inclusion and exclusion.",
+	"code" : 17287
+}
+> db.users.find({"name":"mohit"},{name: 1,given_assessments: 0})
+error: {
+	"$err" : "Can't canonicalize query: BadValue Projection cannot have a mix of inclusion and exclusion.",
+	"code" : 17287
+}
+> db.users.find({"name":"mohit"},{name: 1,given_assessments: 1})
+{ "_id" : ObjectId("546a06d6449fc026a87fdb2c"), "name" : "mohit", "given_assessments" : [ { "assmt_id" : "3002", "date_given" : "03/10/2014", "answer_given" : [ "1020", "1024", "1028" ], "score" : 50, "status" : "pass" }, { "assmt_id" : "3001", "date_given" : "05/10/2014", "answer_given" : [ "1003", "1006", "1008", "1016" ], "score" : 25, "status" : "fail" } ] }
+> db.users.find({"name":"mohit"},{name: 1,given_assessments: 1}).pretty()
+{
+	"_id" : ObjectId("546a06d6449fc026a87fdb2c"),
+	"name" : "mohit",
+	"given_assessments" : [
+		{
+			"assmt_id" : "3002",
+			"date_given" : "03/10/2014",
+			"answer_given" : [
+				"1020",
+				"1024",
+				"1028"
+			],
+			"score" : 50,
+			"status" : "pass"
+		},
+		{
+			"assmt_id" : "3001",
+			"date_given" : "05/10/2014",
+			"answer_given" : [
+				"1003",
+				"1006",
+				"1008",
+				"1016"
+			],
+			"score" : 25,
+			"status" : "fail"
+		}
+	]
+}
+> db.users.find({"name":"mohit"},{given_assessments: 1, _id:0}).pretty()
+{
+	"given_assessments" : [
+		{
+			"assmt_id" : "3002",
+			"date_given" : "03/10/2014",
+			"answer_given" : [
+				"1020",
+				"1024",
+				"1028"
+			],
+			"score" : 50,
+			"status" : "pass"
+		},
+		{
+			"assmt_id" : "3001",
+			"date_given" : "05/10/2014",
+			"answer_given" : [
+				"1003",
+				"1006",
+				"1008",
+				"1016"
+			],
+			"score" : 25,
+			"status" : "fail"
+		}
+	]
+}
+

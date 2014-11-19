@@ -1,0 +1,56 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<script type="text/javascript" src="javascript/gridplay.js" ></script>
+<title>Grid Play</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+
+
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="#">
+    <div style="text-align: center">
+        
+    
+  <input name="radiobutton" type="radio" id="red" value="red" />
+  Red</input>
+  <input name="radiobutton" type="radio" id="blue" value="blue" />
+  Blue</input>
+  <input name="radiobutton" type="radio" id="green" value="green" />
+  Green</input>
+  </div>
+  <br />
+
+<p align = "center">
+<div class= "grid"  onclick="">
+    <div class="row1">
+    <div class="cell" id= "cell1" onclick="changeColor('cell1')">1</div>
+    <div class="cell" id= "cell2" onclick="changeColor('cell2')">2</div>
+    <div class="cell" id= "cell3" onclick="changeColor('cell3')">3</div>
+    </div>
+    <div class="row2">
+    <div class="cell" id="cell4" onclick="changeColor('cell4')">4</div>
+    <div class="cell" id="cell5" onclick="changeColor('cell5')">5</div>
+    <div class="cell" id="cell6" onclick="changeColor('cell6')">6</div>
+    </div>
+    <div class="row3">
+    <div class="cell" id="cell7" onclick="changeColor('cell7')">7</div>
+    <div class="cell" id="cell8" onclick="changeColor('cell8')">8</div>
+    <div class="cell" id="cell9" onclick="changeColor('cell9')">9</div>
+    </div>
+  </div>
+  <br></br></br></br></br></br>
+  <div style="text-align: center">
+      <input type="reset" name="reset" value="Reset" onclick="resetColor()"/>
+      <button type="button" onclick="shuffle()">Shuffle</button>     
+  </div>  
+</p>
+</form>
+
+</body>
+</html>

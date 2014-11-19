@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<link rel="stylesheet" type="text/css" href="css/style2.css" />
+<script type="text/javascript" src="javascript/graph.js" ></script>
+
+<title>Graph Plotter</title>
+</head>
+<body>
+<div id = "data">
+<form name = "line" method="post" onsubmit="#">
+Line Equation:<i>[y=mx+c]</i>
+<input type = "text" name = "equation" id="equation" placeholder="enter the equation.." required><br><br>
+Step size:<br>
+<input type = "text" name = "step" id="step" placeholder="enter size of step.." required><br><br>
+Inbound:<br>
+<input type = "text" name = "inbound" id="inbound" placeholder="enter starting point.." required><br><br>
+OutBound:<br>
+<input type = "text" name = "outbound" id="outbound" placeholder="enter ending point.."required><br><br>
+<br>
+<p align="center"><button type = "button" onclick = "getData()">Draw!</button></p>
+</form>
+</div>
+<div id = "graph">
+<canvas id="myCanvas" width="600" height="600"></canvas>
+    <script>
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+context.moveTo(300, 1);
+context.lineTo(300, 600);
+context.stroke();
+context.moveTo(1, 300);
+context.lineTo(600,300);
+context.stroke();
+context.strokeStyle ='grey';
+context.beginPath();
+function draw(start,end,coef,constant,step){
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var canvas1 = document.getElementById('myCanvas');
+      var context1 = canvas.getContext('2d');
+      var x_transit = canvas.width/2;
+      var y_transit = canvas.height/2;
+      var x=start;
+      var y = -((x*coef)+constant);
+      
+      //var context1 = canvas.getContext('2d');		//plotting the coordinates
+     context1.fillStyle ='blue';
+      context.lineWidth = 2;
+     
+     context1.beginPath();
+     context1.moveTo(x+300,y+300);
+      context.moveTo(x+300,y+300);
+      context1.arc(i, y, 2, 0, 2 * Math.PI, false);
+var i=start+step;
+ while(i<=end)
+      {
+
+      var actual_x = i+x_transit;
+      y = -((i*coef)+constant);
+      y+=y_transit;		
+      
+      context.lineTo(actual_x,y);
+      context.stroke();
+      context1.lineWidth = 1;
+      context1.arc(actual_x, y, 2, 0, 2 * Math.PI, false);	//plotting intermediate points
+      context1.fill();
+      context1.moveTo(actual_x,y);
+      i=i+step;
+
+      }
+
+return false;
+}   
+      
+      
+      
+    </script>
+</div>
+</body>

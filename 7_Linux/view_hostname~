@@ -13,7 +13,7 @@ echo -e "Your Groups are:\t["`groups`"]" >> Assignment.log
 file_list=( $(ls -pR $HOME| grep -v /) )
 
 # printing elements line by line in file 
-echo -e "List of files in home and subdirectories:\n" >> Assignment.log
+echo -e "List of files in current and subdirectories:\n" >> Assignment.log
 printf -- '%s\n' "${file_list[@]}" >> Assignment.log
 
 #displaying completion message

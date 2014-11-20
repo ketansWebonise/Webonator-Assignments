@@ -1,0 +1,7 @@
+#!/bin/bash
+# Renames all the files having .txt extension and starting with 'x'
+
+target_path=`find -type d -name 'assignments'`
+cd $target_path
+rename 's/x.*\.txt$/_RENAMED.txt/' *
+echo -e "Files Renamed!"

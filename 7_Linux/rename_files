@@ -1,0 +1,7 @@
+#!/bin/bash
+# Renames all the files having .txt extension
+
+rename 's/\.txt$/_RENAMED.txt/' *
+echo -e "Files Renamed!"
+echo -e "New files:"
+echo -e `ls -l | grep .txt$`

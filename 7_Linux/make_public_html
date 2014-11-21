@@ -22,3 +22,6 @@ cd public_html
 #copying the files 
 mkdir public_html
 find ./ -type f -exec cp {} ./public_html \;
+
+#renaming the copied public_html
+mv ./public_html RENAMED_public_html

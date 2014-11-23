@@ -81,7 +81,7 @@ public class GetProgrammingLanguage {
 		{
 			return "Java";
 		}
-		else
+		else if (test.matches(".*class.*end")||test.matches(".*def.*end")||test.matches("puts|gets|@+|\\$"))
 		{
 			return "Ruby";
 		}

@@ -1,6 +1,6 @@
 #!/bin/bash
 # Renames all the files having .txt extension and starting with 'x'
 
-echo -e "\nFiles Starting with x Renamed! on "`date`"\n" >> Assignment.log
-echo -e `rename -v 's/(x)(.*)\.txt$/\$1$2_RENAMED.txt/' *` >> Assignment.log
+echo -e "\nFiles Starting with x Renamed! on "`date`"\n" >> Assignment.log 2>&1
+echo -e `rename -v 's/(x)(.*)\.txt$/\$1$2_RENAMED.txt/' *` >> Assignment.log 2>&1
 echo -e "files Renamed successfully!"

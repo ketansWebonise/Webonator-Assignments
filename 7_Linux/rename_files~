@@ -1,8 +1,0 @@
-#!/bin/bash
-# Renames all the files having .txt extension
-
-echo -e "\n\nFiles Renamed on "`date`" \n" >> Assignment.log 2>&1
-echo -e "New File Names: " >> Assignment.log 2>&1
-renamed_file_list=($(rename -v 's/\.txt$/_RENAMED.txt/' *))
-printf -- '%s\n' "${renamed_file_list[@]}" >> Assignment.log 2>&1
-echo "Files successfully renamed"

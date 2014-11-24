@@ -3,6 +3,14 @@
 
 echo -e "\n\nFiles Renamed on "`date`" \n" >> Assignment.log 2>&1
 echo -e "New File Names: " >> Assignment.log 2>&1
+<<<<<<< HEAD
 renamed_file_list=($(rename -v 's/\.txt$/_RENAMED.txt/' *))
+=======
+
+#storing verbose output in an array
+renamed_file_list=($(rename -v 's/\.txt$/_RENAMED.txt/' *))
+
+#writing that array to Assignment.log
+>>>>>>> 3d57255525983f75f39ed35601b634f87623d973
 printf -- '%s\n' "${renamed_file_list[@]}" >> Assignment.log 2>&1
 echo "Files successfully renamed"

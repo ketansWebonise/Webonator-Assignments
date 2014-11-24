@@ -3,14 +3,17 @@
 #making directory public_html and file readme.txt
 mkdir public_html
 cd public_html
+echo -e "making directory public_html and file readme.txt..."
 touch readme.txt
 chmod 777 readme.txt
 cd ..
 
 #fetching files in the directory
+echo -e "fetching files in the directory..."
 file_list=( $(ls -p | grep -v /) )
 
 #copying first four of them
+echo -e "copying first four files from the directory..."
 for index in 0 1 2 3
  do
   cp ${file_list[$index]} ./public_html
@@ -19,9 +22,16 @@ for index in 0 1 2 3
 #entering the dirctory
 cd public_html
 
-#copying the files 
+echo -e "copying folder public_html into public_html..."
+#copying folder public_html into public_html
+
 mkdir public_html
 find ./ -type f -exec cp {} ./public_html \;
 
 #renaming the copied public_html
 mv ./public_html RENAMED_public_html
+<<<<<<< HEAD
+=======
+
+echo -e "\nScript Executed Successfully!"
+>>>>>>> 3d57255525983f75f39ed35601b634f87623d973

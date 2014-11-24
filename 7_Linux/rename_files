@@ -1,12 +1,12 @@
 #!/bin/bash
 # Renames all the files having .txt extension
 
-echo -e "\n\nFiles Renamed on "`date`" \n" >> Assignment.log
-echo -e "New File Names: " >> Assignment.log
+echo -e "\n\nFiles Renamed on "`date`" \n" >> Assignment.log 2>&1
+echo -e "New File Names: " >> Assignment.log 2>&1
 
 #storing verbose output in an array
 renamed_file_list=($(rename -v 's/\.txt$/_RENAMED.txt/' *))
 
 #writing that array to Assignment.log
-printf -- '%s\n' "${renamed_file_list[@]}" >> Assignment.log
+printf -- '%s\n' "${renamed_file_list[@]}" >> Assignment.log 2>&1
 echo "Files successfully renamed"

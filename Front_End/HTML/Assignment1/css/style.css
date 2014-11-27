@@ -73,7 +73,10 @@ li a:hover{
 	background-color : #499bd7;
 	height: 177px;
 	text-align: center;
+	line-height: 177px;
+}
+h1{
 	font-size: 30px;
 	color: white;
-	line-height: 177px;
+	font-weight: normal;
 }

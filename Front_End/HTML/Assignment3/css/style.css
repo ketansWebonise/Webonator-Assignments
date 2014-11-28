@@ -1,0 +1,115 @@
+/*Default Reset CSS*/
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/*declaring external fonts*/
+@font-face {
+    font-family: SourceSansProLight;
+    src: url(../fonts/SourceSansPro-Light.ttf.woff);
+}
+
+@font-face {
+    font-family: SourceSansProBold;
+    src: url(../fonts/SourceSansPro-Bold.ttf.woff);
+}
+
+/*actual CSS styling*/
+
+.WidthContainer{
+	width: 940px;
+	margin: auto;
+}
+
+.Container
+{
+	font-family: SourceSansProBold, Arial , Helvetica, sans-serif;
+}
+#Content
+{
+	padding: 30px 38px;
+	font-size: 14px;
+}
+
+#NavigationBar
+{
+	background-color : #444444;
+	height : 50px;
+	line-height: 50px;
+	font-size: 14px;
+	color: gray;
+}
+#NavigationBar li{
+	float: left;
+	display: inline;
+	border-left: 1px solid #333333;
+	padding:  0px 25px 0px 25px;
+}
+
+li {
+	display: inline;
+	float: left;
+}
+
+li a{
+	
+	color: gray;
+	text-decoration: none;
+}
+li a:hover{
+	color: #ffffff;
+	background-color: #499bd7;
+	border-radius: 3px;
+	
+}
+.ImageBox{
+	float: left;
+	height: 207px;
+	width: 207px;
+	padding:0px 12px 5px 0px;
+
+
+}
+#Footer{
+	height: 65px;
+	background-color: #eeeeee;
+	line-height: 65px;
+	font-size: 12px; 
+	
+}
+.Links{
+	float: left;
+}
+.BottomMessege{
+	float: right;
+}
+#Banner
+{
+	background-image: url("../images/background_header.jpg");
+    background-repeat: repeat;
+	height: 486px;
+	text-align: center;
+}
+h1{
+	font-size: 30px;
+	color: white;
+	font-weight: normal;
+}
+.Options{
+	padding: 5px 5px 5px 5px;
+
+}
+
+.SingleOption{
+	width: 175px;
+	float: left;
+}
+
+.SingleOptionImage{
+	border-radius: :50px;
+	background-color: efefef;
+	height: 140px;
+	width: 140px;
+}

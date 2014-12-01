@@ -19,7 +19,7 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
-#container
+body
 {
 	font-family: Arial, Helvetica, sans-serif;
 	
@@ -28,8 +28,6 @@ time, mark, audio, video {
 #navigator 
 {
 	background-color:#444444;
- 	height:50px;
-	line-height:50px;
 	font-weight:bold;
 
 
@@ -37,9 +35,9 @@ time, mark, audio, video {
 #logo
 {
 	float:left;
-	padding:9px 50px 9px 0px;
+	padding:9px 0px;
 	height: 32px;
-	border-right: 1px solid gray;
+	margin-right: 50px;
 }
 
 #navigator ul 
@@ -53,15 +51,21 @@ time, mark, audio, video {
 	text-transform: uppercase;
 	font-size:14px;
 	border-right: 1px solid gray;
-	padding: 0px 25px 0px 25px;
+	line-height:50px;
 }
-#navigator a 
+#navigator li:first-child{
+	border-right: 1px solid gray;
+	border-left: 1px solid gray;
+}
+#navigator li a 
 {
     	color:#939393;
     	text-decoration: none;
+    	display: block;
+    	padding: 0px 25px;
 }
 
-#navigator a:hover 
+#navigator li a:hover 
 {
      	color:#ff9900;
      	text-decoration:none; 
@@ -84,7 +88,7 @@ time, mark, audio, video {
 #Banner img
 {
 	float:right;
-	padding-top: 50px;
+	padding: 50px 0px 15px 0px;
 }
 
 .art_gallery
@@ -94,9 +98,7 @@ time, mark, audio, video {
 	float:left;
 	color:white;
 	
-	
 }
-
 h1
 {
 	font-size:40px;
@@ -108,20 +110,21 @@ h2
 	font-size:30px;
 	font-weight:normal;
 }
-.view_gallery
-{
-	text-transform: uppercase;
+.view_gallery, .join_now {	
+	margin:47px 0px 0px 0px;
+	float:left;	
 	border-radius: 5px;
-	background:white;
-	color:#1F1F1F;
-	height:47px;
-	width: 170px;
-	float:left;
-	
 	font-weight: bold;
 	line-height:47px;
 	text-align:center;
-	margin:47px 0px 0px 0px;
+}
+.view_gallery
+{
+	height:47px;
+	width: 170px;
+	background:white;
+	text-transform: uppercase;
+	color:#1f1f1f;		
 }
 .join_now
 {
@@ -131,12 +134,8 @@ h2
 	height:47px;
 	width: 170px;
 	color: white;
-	float:left;
+	margin-left: 20px;
 	
-	font-weight: bold;
-	line-height:47px;
-	text-align:center;
-	margin: 47px 0px 0px 20px;
 	
 	
 }
@@ -200,7 +199,7 @@ h3
 {
 	background-color: #ececec;
 	color: Gray;
-	height: 160px;
+	padding-bottom: 85px;
 }
 
 .social_media_option
@@ -222,7 +221,7 @@ h3
 }
 #footer li{
 	float: left;
-	padding:30px  15px 25px 0px;
+	padding:30px 15px 25px 0px;
 }
 
 #footer a{
@@ -233,8 +232,31 @@ h3
 #footer a:hover{
 	color: rgba(62,62,62,1);
 }
-#active_page{
+#selected_page a{
 	text-decoration: none;
-	color: gray;
+	color: rgba(62,62,62,1);
 	font-weight: bold;
+}
+.bottom_message{
+	float: left;
+}
+.bottom_options{
+	
+	margin-left: 25px;
+	float: left;
+
+}
+#footer .bottom_options li
+{
+	padding:0px;
+}
+#footer .bottom_options li a{
+	float: left;
+	color: #aaaaaa;
+	margin: 0px 10px;
+}
+#footer .bottom_options li a:hover{
+	float: left;
+	color: #666666;
+	margin: 0px 10px;
 }

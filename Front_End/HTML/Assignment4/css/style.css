@@ -1,0 +1,125 @@
+/*Default Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+a{
+	text-decoration: none;
+	display: block;
+}
+ul{
+	list-style-type: none;
+}
+
+.container
+{
+	width:940px;
+	margin:auto;
+}
+.clearBlock, .options li.clearBlock
+{
+	clear:both;
+	float: none;
+	height:0;
+	width:0;
+	margin:0;
+	border:0;
+	padding:0;
+}
+a.logo{
+	float:left;
+	height: 45px;
+	width:120px;
+	background-image: url("../images/logo.png");
+	margin:6px 0px 4px 0px;
+}
+
+ul.socialIcons{
+	float: right;
+	margin-top: 16px;
+}
+.socialIcons li{
+	float: left;
+}
+.socialIcons li a
+{
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	background-color: #ff0000;
+	margin: 0px 0px 0px 5px;
+}
+.socialIcons li a.facebook{
+	background-image: url("../images/fb_icon.png");
+}
+.socialIcons li a.twitter{
+	background-image: url("../images/twitter_icon.png");
+}
+.socialIcons li a.pin{
+	background-image: url("../images/pin_icon.png");
+}
+.socialIcons li a.googlePlus{
+	background-image: url("../images/google_plus_icon.png");
+}
+.socialIcons a:hover{
+	background-color: cornflowerBlue;
+}
+ul.navigationLinks{
+	float: right;
+	margin: 22px 22px 0px 0px;
+}
+.navigationLinks li{
+	float: left;
+	margin-right: 20px;
+}
+.navigationLinks li a{
+	color: #ff0000;
+}
+.navigationLinks li a:hover{
+	color: #773300;
+}
+
+.slider{
+	background-color: #000000;
+}
+.slider .container{
+	background-image: url("../images/wedding_bg.jpg");
+}
+.slider h2{
+	font-size: 44px;
+	color: #ffffff;
+	padding:440px 0px 0px 0px;
+}
+.slider h3{
+	font-size: 22px;
+	color: #ffffff;
+	padding-bottom: 20px;
+}
+.optionsList{
+	background-color: #ff0000;
+	padding: 20px 0px;
+}
+.options li{
+	float: left;
+}
+.options li a{
+	width: 200px;
+	height: 60px;
+	border: 2px solid #ffffff;
+	border-radius: 5px;
+	background-color: transparent;
+	margin-right: 12px;
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 60px;
+	padding-left: 20px;
+}
+.options li a img{
+	float: right;
+	margin-right: 13px;
+	margin-top: 16px;
+}

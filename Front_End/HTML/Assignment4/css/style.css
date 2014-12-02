@@ -20,7 +20,7 @@ ul{
 	width:940px;
 	margin:auto;
 }
-.clearBlock, .options li.clearBlock
+.clearBlock, .options li.clearBlock, .contents ul li.clearBlock
 {
 	clear:both;
 	float: none;
@@ -105,6 +105,7 @@ ul.navigationLinks{
 }
 .options li{
 	float: left;
+	margin-right: 12px;
 }
 .options li a{
 	width: 200px;
@@ -112,7 +113,6 @@ ul.navigationLinks{
 	border: 2px solid #ffffff;
 	border-radius: 5px;
 	background-color: transparent;
-	margin-right: 12px;
 	color: #ffffff;
 	font-size: 20px;
 	line-height: 60px;
@@ -122,4 +122,43 @@ ul.navigationLinks{
 	float: right;
 	margin-right: 13px;
 	margin-top: 16px;
+}
+.options li a:hover{
+	background-color: #aaaaaa;
+	border-color: #bbbbbb;
+}
+.contents{
+	padding: 65px 0px 70px 0px;
+}
+
+.contents h2{
+	color: #ff0000;
+	font-size: 30px;
+	margin-bottom: 24px;
+}
+
+.contents ul li{
+	float: left;
+	width:300px;
+	margin-left: 20px;
+	background-color: #000000;
+	color: white;
+}
+.contents ul li:first-child{
+	margin-left: 0px;
+	}
+.contents ul li h3{
+	font-size: 11px;
+	font-weight: bold;
+	padding:20px 40px 0px 15px;
+
+}
+.contents ul li h1{
+	font-size: 18px;
+	font-weight: bold;
+	padding:0px 40px 0px 15px;
+}
+.contents ul li h4{
+	font-size: 12px;
+	padding:15px 40px 25px 15px;
 }

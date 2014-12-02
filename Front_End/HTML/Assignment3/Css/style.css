@@ -7,7 +7,6 @@
 body{
 	font-family: Arial, Helvetica, sans-serif;
 }
-
 a{
 	text-decoration: none;
 }
@@ -18,13 +17,11 @@ ul{
 	background-color:#444444;
 	font-weight:bold;
 }
-
 #logo{
 	float:left;
 	margin:9px 50px 9px 0px;
 	height: 32px;
 }
-
 #navigator li {
  	float:left;
 	text-transform: uppercase;
@@ -32,7 +29,6 @@ ul{
 	border-right: 1px solid gray;
 	line-height:50px;
 }
-
 #navigator li:first-child{
 	border-left: 1px solid gray;
 }
@@ -52,18 +48,13 @@ ul{
 }
 #banner
 {
-  
-	background-repeat:repeat;
 	background-image: url("../images/background_header.jpg");
-	height:486px;
 }
-
 #banner img
 {
 	float:right;
-	padding: 50px 0px 15px 0px;
+	margin: 50px 0px 32px 0px;
 }
-
 .artGallery
 {
 	margin:186px 0px 0px 19px;
@@ -87,11 +78,9 @@ h2
 	line-height:47px;
 	text-align:center;
 }
-
 .viewGallery{
 	background:white;		
 }
-
 .joinNow{
 	background: #ff9900;
 	margin-left: 20px;
@@ -114,8 +103,7 @@ h3 {
 	font-size:36px;
 	line-height:62px;
 	height:62px;
-	padding-top:62px;
-	padding-bottom:76px;
+	margin:62px 0px 76px 0px;
 }
 #content ul {
 	padding: 0px 120px 0px 120px;
@@ -157,7 +145,7 @@ h3 {
 	padding-bottom: 85px;
 	box-shadow: 0px -2px 3px #aaaaaa;
 }
-.socialMediaOption
+.socialMediaOption li
 {
 	width: 20px;
 	height: 22px;
@@ -167,22 +155,21 @@ h3 {
 	padding: 4px 5px 4px 5px;
 	margin: 20px 8px 0px 0px;
 }
-.socialMediaOption:hover{
+.socialMediaOption li:hover{
 	background-color: cornflowerBlue;
 }
-
-#footer li{
+.bottomMenu li{
 	float: left;
 	margin: 30px 15px 28px 0px;
 }
-#footer a{
+.bottomMenu a{
 	color: #ff9900;
 	font-weight: bold;
 }
-#footer a:hover{
+.bottomMenu a:hover{
 	color: rgba(62,62,62,1);
 }
-#selectedPage a{
+.selectedPage a{
 	color: rgba(62,62,62,1);
 	font-weight: bold;
 }
@@ -193,9 +180,9 @@ h3 {
 	margin-left: 25px;
 	float: left;
 }
-#footer .bottomOptions li
-{
+#footer .bottomOptions li{
 	margin:0px;
+	float: left;
 }
 #footer .bottomOptions li a{
 	color: #aaaaaa;

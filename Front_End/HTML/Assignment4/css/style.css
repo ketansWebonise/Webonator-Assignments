@@ -212,3 +212,10 @@ ul.navigationLinks{
 	margin-left: 5px;
 	margin-right: 5px;
 }
+.footerList li.bottom{
+	margin-top: 30px;
+	color: #ffffff;
+	font-family: Minion Pro;
+	font-size: 14px;
+	font-weight: bold;
+}

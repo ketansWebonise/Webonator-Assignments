@@ -105,7 +105,7 @@ ul.navigationLinks{
 }
 .options li{
 	float: left;
-	margin-right: 12px;
+	margin-right: 11px;
 }
 .options li a{
 	width: 200px;
@@ -146,7 +146,8 @@ ul.navigationLinks{
 }
 .contents ul li:first-child{
 	margin-left: 0px;
-	}
+}
+
 .contents ul li h3{
 	font-size: 11px;
 	font-weight: bold;
@@ -161,4 +162,34 @@ ul.navigationLinks{
 .contents ul li h4{
 	font-size: 12px;
 	padding:15px 40px 25px 15px;
+}
+.footer{
+	padding: 29px 0px 129px 0px;
+	background-color: rgba(63,63,63,1);
+}
+
+.footerList{
+	float:left;
+	margin-left: 70px;
+}
+.footerList:first-child{
+	float:left;
+	margin-left: 0px;
+}
+.footerList li a{
+	color: #ffffff;
+	font-family: Minion Pro;
+	font-size: 14px;
+}
+.footerList li:first-child{
+	color: #b2b2b2;
+	font-family: Myriad Pro;
+	font-size: 15px;
+	padding-left: 4px;
+}
+.footerList hr
+{
+	border-top: 1px solid #ffffff;
+	margin-left: 5px;
+	margin-right: 5px;
 }

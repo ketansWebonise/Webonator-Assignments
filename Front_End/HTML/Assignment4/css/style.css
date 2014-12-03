@@ -66,7 +66,7 @@ ul.socialIcons{
 	background-image: url("../images/google_plus_icon.png");
 }
 .socialIcons a:hover{
-	background-color: cornflowerBlue;
+	background-color: #773300;
 }
 ul.navigationLinks{
 	float: right;
@@ -84,20 +84,24 @@ ul.navigationLinks{
 }
 
 .slider{
-	background-color: #000000;
+	background: #000000 no-repeat url("../images/wedding_bg.jpg") center top;
 }
 .slider .container{
-	background-image: url("../images/wedding_bg.jpg");
+	position: relative;
+	height: 545px;
 }
-.slider h2{
+.slider .textWrapper{
+	position: absolute;
+	margin:440px 0px 20px 0px;
+}
+
+.slider h1{
 	font-size: 44px;
 	color: #ffffff;
-	padding:440px 0px 0px 0px;
 }
 .slider h3{
 	font-size: 22px;
 	color: #ffffff;
-	padding-bottom: 20px;
 }
 .optionsList{
 	background-color: #ff0000;
@@ -105,17 +109,21 @@ ul.navigationLinks{
 }
 .options li{
 	float: left;
-	margin-right: 11px;
-}
-.options li a{
-	width: 200px;
-	height: 60px;
+	margin-left: 20px;
+	width: 216px;
+	height: 56px;
 	border: 2px solid #ffffff;
 	border-radius: 5px;
 	background-color: transparent;
+}
+.options li:first-child{
+	margin-left: 0px;
+}
+.options li a{
+
 	color: #ffffff;
 	font-size: 20px;
-	line-height: 60px;
+	line-height: 58px;
 	padding-left: 20px;
 }
 .options li a img{
@@ -123,7 +131,7 @@ ul.navigationLinks{
 	margin-right: 13px;
 	margin-top: 16px;
 }
-.options li a:hover{
+.options li:hover{
 	background-color: #aaaaaa;
 	border-color: #bbbbbb;
 }
@@ -170,58 +178,41 @@ ul.navigationLinks{
 .footer ul li a{
 	color: #ffffff;
 	font-family: Minion Pro;
+	font-size:14px;
+}
+.footer ul li a:hover{
+	color: #aa9999;
 }
 .footerList{
+	width:165px;
 	float:left;
-	margin-left: 70px;
+	margin-left: 28px;
+	color:#ffffff;
 }
 .footerList:first-child{
-	float:left;
+
 	margin-left: 0px;
 }
-.footerList li a{
-	font-family: Minion Pro;
-	font-size: 14px;
-}
-.footerList li:first-child{
-	color: #b2b2b2;
+.footerList .upper h4{
+	margin-left: 3px;
 	font-family: Myriad Pro;
 	font-size: 15px;
-	padding-left: 4px;
+	color: #aaaaaa;
 }
-.footerListBottom{
-	float:left;
-	margin-right: 70px;
+.footerList .bottom{
 	margin-top: 25px;
 }
-.footerListBottom:first-child{
-	float:left;
-	margin-left: 0px;
-}
-.footerListBottom li a{
-	font-family: Minion Pro;
-	font-size: 14px;
-}
-.footerListBottom li:first-child{
-	color: #ffffff;
-	font-weight: bold;
-}
-
-.footerList li.bottom{
-	margin-top: 30px;
-	color: #ffffff;
-	font-family: Minion Pro;
-	font-size: 14px;
+.footerList .bottom li a{
 	font-weight: bold;
 }
 .bottomNavigation{
 	border-top: 1px solid #535353;
-	margin: 29px 5px 0px 5px;
+	margin: 29px 0px 0px 0px;
 	padding-top: 20px;
 }
 .bottomNavigation ul{
-	float: left;
-	margin-left:160px;
+	width:567px;
+	margin: auto;
 }
 .bottomNavigation ul li{
 	float: left;
@@ -234,4 +225,11 @@ ul.navigationLinks{
 .bottomNavigation ul li a{
 	font-family: Myriad Pro;
 	font-size: 12px;	
+}
+.bottomNavigation p{
+	color: #b2b2b2;
+	font-family: Minion Pro;
+	font-size: 14px;
+	margin-top: 12px;
+	text-align: center;
 }

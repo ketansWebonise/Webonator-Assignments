@@ -187,6 +187,25 @@ ul.navigationLinks{
 	font-size: 15px;
 	padding-left: 4px;
 }
+.footerListBottom{
+	float:left;
+	margin-right: 70px;
+	margin-top: 25px;
+}
+.footerListBottom:first-child{
+	float:left;
+	margin-left: 0px;
+}
+.footerListBottom li a{
+	color: #ffffff;
+	font-family: Minion Pro;
+	font-size: 14px;
+}
+.footerListBottom li:first-child{
+	color: #ffffff;
+	font-weight: bold;
+}
+
 .footerList hr
 {
 	border-top: 1px solid #ffffff;

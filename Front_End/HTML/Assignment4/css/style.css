@@ -167,7 +167,10 @@ ul.navigationLinks{
 	padding: 29px 0px 129px 0px;
 	background-color: rgba(63,63,63,1);
 }
-
+.footer ul li a{
+	color: #ffffff;
+	font-family: Minion Pro;
+}
 .footerList{
 	float:left;
 	margin-left: 70px;
@@ -177,7 +180,6 @@ ul.navigationLinks{
 	margin-left: 0px;
 }
 .footerList li a{
-	color: #ffffff;
 	font-family: Minion Pro;
 	font-size: 14px;
 }
@@ -197,7 +199,6 @@ ul.navigationLinks{
 	margin-left: 0px;
 }
 .footerListBottom li a{
-	color: #ffffff;
 	font-family: Minion Pro;
 	font-size: 14px;
 }
@@ -206,16 +207,31 @@ ul.navigationLinks{
 	font-weight: bold;
 }
 
-.footerList hr
-{
-	border-top: 1px solid #ffffff;
-	margin-left: 5px;
-	margin-right: 5px;
-}
 .footerList li.bottom{
 	margin-top: 30px;
 	color: #ffffff;
 	font-family: Minion Pro;
 	font-size: 14px;
 	font-weight: bold;
+}
+.bottomNavigation{
+	border-top: 1px solid #535353;
+	margin: 29px 5px 0px 5px;
+	padding-top: 20px;
+}
+.bottomNavigation ul{
+	float: left;
+	margin-left:160px;
+}
+.bottomNavigation ul li{
+	float: left;
+	border-left: 1px solid #ffffff;
+	padding:0px 9px;
+}
+.bottomNavigation ul li:first-child{
+	border-left: none;
+}
+.bottomNavigation ul li a{
+	font-family: Myriad Pro;
+	font-size: 12px;	
 }

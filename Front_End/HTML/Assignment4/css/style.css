@@ -20,7 +20,7 @@ ul{
 	width:940px;
 	margin:auto;
 }
-.clearBlock, .options li.clearBlock, .contents ul li.clearBlock
+.clearBlock, .options li.clearBlock, .contents ul li.clearBlock, .footer li.clearBlock
 {
 	clear:both;
 	float: none;
@@ -66,7 +66,7 @@ ul.socialIcons{
 	background-image: url("../images/google_plus_icon.png");
 }
 .socialIcons a:hover{
-	background-color: #773300;
+	background-color: #aa0000;
 }
 ul.navigationLinks{
 	float: right;
@@ -80,7 +80,7 @@ ul.navigationLinks{
 	color: #ff0000;
 }
 .navigationLinks li a:hover{
-	color: #773300;
+	color: #aa0000;
 }
 
 .slider{
@@ -106,6 +106,7 @@ ul.navigationLinks{
 .optionsList{
 	background-color: #ff0000;
 	padding: 20px 0px;
+	margin-bottom: 65px;
 }
 .options li{
 	float: left;
@@ -114,7 +115,7 @@ ul.navigationLinks{
 	height: 56px;
 	border: 2px solid #ffffff;
 	border-radius: 5px;
-	background-color: transparent;
+	background:url("../images/go_icon.png") no-repeat right 15px center;
 }
 .options li:first-child{
 	margin-left: 0px;
@@ -132,11 +133,11 @@ ul.navigationLinks{
 	margin-top: 16px;
 }
 .options li:hover{
-	background-color: #aaaaaa;
-	border-color: #bbbbbb;
+	background: #aa0000 url("../images/go_icon.png") no-repeat right 15px center;
+	border-color:#aaaaaa;
 }
 .contents{
-	padding: 65px 0px 70px 0px;
+	margin-bottom:70px;
 }
 
 .contents h2{
@@ -149,27 +150,31 @@ ul.navigationLinks{
 	float: left;
 	width:300px;
 	margin-left: 20px;
+}
+.contents .description{
 	background-color: #000000;
 	color: white;
+	padding:20px 40px 25px 15px;
 }
 .contents ul li:first-child{
 	margin-left: 0px;
 }
-
-.contents ul li h3{
+.contents .imageBox{
+	height: 200px;
+}
+.contents ul li span{
 	font-size: 11px;
 	font-weight: bold;
-	padding:20px 40px 0px 15px;
-
 }
 .contents ul li h1{
 	font-size: 18px;
 	font-weight: bold;
-	padding:0px 40px 0px 15px;
+	padding:0px 0px 0px 0px;
 }
-.contents ul li h4{
+.contents ul li p{
 	font-size: 12px;
-	padding:15px 40px 25px 15px;
+	padding:15px 0px 0px 0px;
+	font-weight: bold;
 }
 .footer{
 	padding: 29px 0px 129px 0px;
@@ -181,7 +186,7 @@ ul.navigationLinks{
 	font-size:14px;
 }
 .footer ul li a:hover{
-	color: #aa9999;
+	color: #aa5555;
 }
 .footerList{
 	width:165px;
@@ -211,7 +216,7 @@ ul.navigationLinks{
 	padding-top: 20px;
 }
 .bottomNavigation ul{
-	width:567px;
+	width:580px;
 	margin: auto;
 }
 .bottomNavigation ul li{

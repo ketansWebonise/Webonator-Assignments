@@ -169,7 +169,6 @@ ul.navigationLinks{
 .contents ul li h1{
 	font-size: 18px;
 	font-weight: bold;
-	padding:0px 0px 0px 0px;
 }
 .contents ul li p{
 	font-size: 12px;
@@ -179,6 +178,7 @@ ul.navigationLinks{
 .footer{
 	padding: 29px 0px 129px 0px;
 	background-color: rgba(63,63,63,1);
+	border-top: 1px solid #dadada;
 }
 .footer ul li a{
 	color: #ffffff;

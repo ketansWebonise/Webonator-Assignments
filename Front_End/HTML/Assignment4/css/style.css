@@ -92,7 +92,7 @@ ul.navigationLinks{
 }
 .slider .textWrapper{
 	position: absolute;
-	margin:440px 0px 20px 0px;
+	bottom: 20px;
 }
 
 .slider h1{

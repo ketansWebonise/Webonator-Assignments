@@ -20,7 +20,7 @@ li{
 	float: left;
 }
 
-.clearBlock, .socialIcons li.clearBlock
+.clearBlock, .socialIcons li.clearBlock, .navigationLinks li.clearBlock
 {
 	clear:both;
 	float: none;
@@ -89,15 +89,13 @@ li{
 	background:url("../images/twitter_icon.png");
 	height: 25px;
 }
-.navigationLinks{
-	margin-top: 38px;
-}
 .navigationLinks li{
-	list-style-image: url("../images/navigation_right_separator.png");
-	padding: 0px 11px 0px 12px; 
+	background: no-repeat 0 0 url("../images/navigation_right_seperator.png");
+	padding: 0px 11px 0px 12px;
+	height: 65px;
 }
 .navigationLinks li:first-child{
-	list-style-image: url("../images/navigation_left_separator.png");
+	background: no-repeat 0 0 url("../images/navigation_left_seperator.png");
 }
 .navigationLinks li.active a, .navigationLinks li a:hover{
 	color:#005587;
@@ -107,6 +105,7 @@ li{
 	text-shadow:  0px 2px #ffffff;
 	font-size:14px;
 	font-weight: bold;
+	padding-top: 40px;
 }
 .slider{
 	margin-bottom: 10px;

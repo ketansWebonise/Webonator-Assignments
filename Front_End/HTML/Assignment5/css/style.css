@@ -40,12 +40,13 @@ li{
 	width:940px;
 	margin:auto;
 	background-color: #ffffff;
-	box-shadow: 0px 30px 60px #aaaaaa;
+	box-shadow: 0px 2px 10px #aaaaaa;
 	position: relative;
 }
 .navigation .container{
 	background-color: transparent;
 	box-shadow: none;
+	padding-top: 20px;
 }
 .logoWrapper{
 	height: 111px;
@@ -55,7 +56,7 @@ li{
 
 }
 .linkWrapper{
-	float:left;
+	float:right;
 	margin-left: 40px;
 
 }
@@ -74,7 +75,6 @@ li{
 }
 .socialIcons{
 	float: right;
-	margin-top: 19px;
 }
 .socialIcons li{
 	float: right;
@@ -85,17 +85,29 @@ li{
 	background:url("../images/facebook_icon.png");
 	height: 25px;
 }
+.fb:hover{
+	background:url("../images/facebook_hover.png");
+}
 .twitter{
 	background:url("../images/twitter_icon.png");
 	height: 25px;
 }
+.twitter:hover{
+	background:url("../images/twitter_hover.png");
+}
+.navigationLinks{
+	float:right;
+}
 .navigationLinks li{
 	background: no-repeat 0 0 url("../images/navigation_right_seperator.png");
-	padding: 0px 11px 0px 12px;
-	height: 65px;
+	padding-left: 14px;
+	padding-top: 40px;
+	height: 25px;
+	margin-left: 14px;
 }
 .navigationLinks li:first-child{
-	background: no-repeat 0 0 url("../images/navigation_left_seperator.png");
+	background: no-repeat 0 0 url("../images/first_child_bg.png");
+	margin-left: 0px;
 }
 .navigationLinks li.active a, .navigationLinks li a:hover{
 	color:#005587;
@@ -103,16 +115,17 @@ li{
 .navigationLinks li a{
 	color: #209cd5;
 	text-shadow:  0px 2px #ffffff;
-	font-size:14px;
+	font-size:15px;
 	font-weight: bold;
-	padding-top: 40px;
+	
 }
 .slider{
-	margin-bottom: 10px;
+
+	position: relative;
+	z-index: -1;
 }
 .slider .imageBox{
 	background: no-repeat url("../images/slider_background.jpg") center top;
-	position: relative;
 	height: 323px;
 }
 .slider .imageBox .textWrapper{
@@ -131,11 +144,10 @@ li{
 	font-weight: normal;
 }
 .contents{
+	padding: 10px 10px 0px 10px;
 	margin-bottom: 75px;
 }
-.contents ul{
-	padding: 0px 10px;
-}
+
 .contents ul li{
 	width:300px;
 	margin-left: 10px;

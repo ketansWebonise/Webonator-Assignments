@@ -75,5 +75,17 @@ li{
 	margin:4px 0px 8px 0px;
 }
  a.login:hover{
- 	background-color: cornflowerBlue;
+ 	background-color: #f48324;
+}
+.banner .imageBox{
+	position: relative;
+	height: 320px;
+	background: no-repeat url("../images/upper_slider_image.jpg") center top;
+}
+.banner .imageBox h2{
+	position:absolute;
+	left:70px; top:40px;
+	font-size: 30px;
+	font-weight: normal;
+	width: 515px;
 }

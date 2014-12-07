@@ -21,7 +21,7 @@ li{
 	width:940px;
 	margin:auto;
 }
-.clearBlock, .navigation ul li.clearBlock
+.clearBlock, .navigation ul li.clearBlock, .contents .wierdList li.clearBlock
 {
 	clear:both;
 	float: none;
@@ -33,6 +33,7 @@ li{
 }
 .navigation{
 	background-color: #fbfbfb;
+	box-shadow: 0px 2px 10px rgba(0,0,0,0.3)
 }
 .logo{
 	height: 35px;
@@ -72,15 +73,27 @@ li{
 	font-size: 14px;
 	background-color: #88bb33;
 	color: #ffffff;
-	margin:4px 0px 8px 0px;
+	margin: 8px 0px 8px 0px;
 }
  a.login:hover{
  	background-color: #f48324;
+}
+.contact{
+	background: no-repeat url("../images/contact_icon.png");
+	float: right;
+	margin-top: 15px;
+	margin-right: 20px;
+}
+.contact span{
+	margin-left: 25px;
+	font-size: 14px;
+
 }
 .banner .imageBox{
 	position: relative;
 	height: 320px;
 	background: no-repeat url("../images/upper_slider_image.jpg") center top;
+	z-index: -1;
 }
 .banner .imageBox h2{
 	position:absolute;
@@ -88,4 +101,81 @@ li{
 	font-size: 30px;
 	font-weight: normal;
 	width: 515px;
+}
+
+.contents .wierdList{
+	margin:auto;
+	margin-top: -50px;
+	width:775px;
+}
+.contents .wierdList li{
+	float:left;
+	margin-left:65px;
+	width: 145px;
+}
+.contents .wierdList li:first-child{
+	margin-left: 0px;
+}
+.contents .wierdList .imageWrapper{
+	margin:0px 30px 0px 31px;
+	height: 100px;
+	width:84px;
+}
+.contents .enter{
+	background: url("../images/hexagon_Li_1.png");
+}
+.contents .select{
+	background: url("../images/hexagon_Li_2.png");
+}
+.contents .choose{
+	background: url("../images/hexagon_Li_3.png");
+}
+.contents .make{
+	background: url("../images/hexagon_Li_4.png");
+}
+.contents .wierdList li p{
+	margin-top: 30px;
+	text-align: center;
+	color:#888888;
+	font-size: 14px;
+}
+.buttons{
+	margin: auto;
+	margin-top: 45px;
+	width: 480px;
+
+	
+}
+.button{
+	width:160px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 5px;
+	color:#ffffff;
+	padding-left: 40px;
+	font-size: 16px;
+}
+.button:hover{background-color: #ff4400 }
+.home{
+	float: left;
+	background: #ee7700 no-repeat url("../images/home_icon.png") left center;
+}
+.or{
+	float: left;
+	height:30px;
+	width: 30px;
+	border-radius:15px;
+	background-color: #aaaaaa;
+	color: #ffffff;
+	font-size:15px;
+	font-family: segoe script;
+	margin-left: 25px;
+	margin-top: 10px;
+	text-align: center; line-height: 30px;
+}
+
+.vehicle{
+	float: left;
+	background: #ee7700 no-repeat url("../images/car_icon.png") left center;
+margin-left: 25px;
 }

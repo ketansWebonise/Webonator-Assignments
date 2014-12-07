@@ -21,7 +21,7 @@ li{
 	width:940px;
 	margin:auto;
 }
-.clearBlock, .navigation ul li.clearBlock, .contents .wierdList li.clearBlock
+.clearBlock, .navigation ul li.clearBlock, .contents .wierdList li.clearBlock, .sliderDots li.clearBlock,.lowerContents .lowerList li.clearBlock
 {
 	clear:both;
 	float: none;
@@ -56,7 +56,6 @@ li{
 	color:#222222;
 	font-size: 14px;
 	line-height: 45px;
-	
 }
 .navigation li a.active, .navigation li a:hover{
 	color:#888888;
@@ -87,7 +86,6 @@ li{
 .contact span{
 	margin-left: 25px;
 	font-size: 14px;
-
 }
 .banner .imageBox{
 	position: relative;
@@ -143,8 +141,7 @@ li{
 	margin: auto;
 	margin-top: 45px;
 	width: 480px;
-
-	
+	margin-bottom: -25px;	
 }
 .button{
 	width:160px;
@@ -155,7 +152,7 @@ li{
 	padding-left: 40px;
 	font-size: 16px;
 }
-.button:hover{background-color: #ff4400 }
+.button:hover{background-color: #88bb33; }
 .home{
 	float: left;
 	background: #ee7700 no-repeat url("../images/home_icon.png") left center;
@@ -168,7 +165,6 @@ li{
 	background-color: #aaaaaa;
 	color: #ffffff;
 	font-size:15px;
-	font-family: segoe script;
 	margin-left: 25px;
 	margin-top: 10px;
 	text-align: center; line-height: 30px;
@@ -177,5 +173,148 @@ li{
 .vehicle{
 	float: left;
 	background: #ee7700 no-repeat url("../images/car_icon.png") left center;
-margin-left: 25px;
+	margin-left: 25px;
+}
+.lowerContents{
+	padding-top: 94px;
+	border-top: 1px solid #e2e2e2;
+	background-color: #f5f5f5;
+	padding-bottom: 250px;
+}
+.bottomSlider .leftArrow{
+	float: left;
+	margin-left: 17px;
+	padding: 128px 0px 127px 0px;
+}
+.bottomSlider .leftArrow a{
+	height: 50px;
+	width: 26px;
+	background: url("../images/slider_arrow_left.png"); 
+}
+.bottomSlider .rightArrow{
+	float: left;
+	margin-left: 37px;
+	padding: 128px 0px 127px 0px;
+}
+.bottomSlider .rightArrow a{
+	height: 50px;
+	width: 26px;
+	background: url("../images/slider_arrow_right.png"); 
+}
+.bottomSlider .imageWrap{
+	float: left;
+	margin-left:  37px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	position: relative;
+}
+.bottomSlider .imageWrap img{
+	display: block;
+}
+.bottomSlider .imageWrap h3{
+	position: absolute;
+	right:30px;
+	bottom: 60px;
+}
+.bottomSlider .imageWrap h4{
+	position: absolute;
+	right:30px;
+	bottom: 30px;
+}
+.sliderDots{
+	width:51px;
+	margin:auto;
+	margin-top: 9px;
+}
+.sliderDots li{
+	width:10px;
+	height:10px;
+	border-radius: 5px;
+	background-color: #bbbbbb;
+	margin-left: 7px;
+}
+.sliderDots li.active{
+	background-color: #ee7700;
+}
+.lowerContents h2{
+	margin-top: 65px;
+	text-align: center;
+	font-size: 42px; font-weight: normal;
+	font-family: Sawasdee;
+}
+.lowerContents .lowerList{
+	margin-top: 35px;
+}
+.lowerContents .lowerList li{
+	float:left;
+	margin-left:33px;
+	width: 210px;
+}
+.lowerContents .lowerList li p{
+	margin-top: 25px;
+	text-align: center;
+	color: #444444; font-size: 11px;
+}
+.lowerContents .lowerList li:first-child{
+	margin-left: 0px;
+}
+.lowerContents .lowerList .imageWrapper{
+	margin:0px 70px 0px 70px;
+	height: 67px;
+	width:71px;
+}
+.lowerContents .enter{
+	background: url("../images/advantages_icon_1.png");
+}
+.lowerContents .select{
+	background: url("../images/advantages_icon_2.png");
+}
+.lowerContents .choose{
+	background: url("../images/advantages_icon_3.png");
+}
+.lowerContents .make{
+	background: url("../images/advantages_icon_4.png");
+}
+.submitForm{
+	background-color: #ffffff;
+	padding: 40px 40px 52px 50px;
+	margin: -200px 119px 0px 110px;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.3);
+	z-index: 2;
+}
+.submitForm input{
+	margin-top: 25px;
+	display: block;
+	margin-left: 8px;
+	float:left;
+}
+.submitForm h3{
+	margin-left: 13px;
+	text-align: left;
+	font-size: 17px;
+	font-weight: normal;
+}
+.submitForm input[type="text"] {
+	width:290px;
+	height: 20px;
+	border:1px solid #aaaaaa;
+	border-top: none;
+	padding-left: 10px;
+	
+}
+.submitForm input[type="submit"]{
+	width: 74px;
+	height: 29px;
+	border-radius: 5px;
+	color:#ffffff;
+	background-color: #88bb33;
+}
+.footer{
+	background-color: #444444;
+	padding-top: 40px;
+	padding-bottom: 80px;
+	text-align: center;
+	color:#888888;
+}
+.footer p{
+	margin-top: 20px;
 }

@@ -106,7 +106,7 @@ li{
 .border{
 	position: absolute;
 	top: 50px;
-	left: 113px;
+	left: 114px;
 	border: 2px solid #222222;
 	width: 710px;
 	z-index: -1; 
@@ -264,6 +264,7 @@ li{
 	float:left;
 	margin-left:33px;
 	width: 210px;
+	background: no-repeat url("../images/seperator.png");
 }
 .lowerContents .lowerList li p{
 	margin-top: 25px;
@@ -275,6 +276,7 @@ li{
 }
 .lowerContents .lowerList li:first-child{
 	margin-left: 0px;
+	background: transparent;
 }
 .lowerContents .lowerList .imageWrapper{
 	margin:0px 70px 0px 70px;

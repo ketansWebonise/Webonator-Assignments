@@ -147,6 +147,9 @@ li{
 	color:#888888;
 	font-size: 14px;
 }
+.contents .wierdList li span{
+	display: block;
+}
 .buttons{
 	margin: auto;
 	margin-top: 45px;
@@ -265,7 +268,10 @@ li{
 .lowerContents .lowerList li p{
 	margin-top: 25px;
 	text-align: center;
-	color: #444444; font-size: 11px;
+	color: #444444; font-size: 12px;
+}
+.lowerContents .lowerList span{
+	display: block;
 }
 .lowerContents .lowerList li:first-child{
 	margin-left: 0px;
@@ -312,8 +318,7 @@ li{
 	height: 20px;
 	border:1px solid #aaaaaa;
 	border-top: none;
-	padding-left: 10px;
-	border-left-width: 50%; 
+	padding-left: 10px; 
 }
 .submitForm input[type="submit"]{
 	width: 74px;
@@ -321,6 +326,10 @@ li{
 	border-radius: 5px;
 	color:#ffffff;
 	background-color: #88bb33;
+}
+.submitForm input[type="text"].required::-webkit-input-placeholder::after{
+  color:#ff0000;
+  content:'*';
 }
 .footer{
 	background-color: #444444;

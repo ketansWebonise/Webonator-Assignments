@@ -31,10 +31,10 @@ public class DuplicateDemo {
 		}
 		catch(NoSuchElementException e)
 		{
-			System.out.println("Exception: there is no element in the StringTokenizer");
+			System.out.println("Exception: there are no more tokens in this tokenizer's string");
 		}
 		catch(NullPointerException e){
-			System.out.println("Exception in StringTokenizer: the passed String is NULL.");
+			System.out.println("Exception: the passed String to the StringTokenizer is NULL.");
 		}
 		return updatedString;
 	}

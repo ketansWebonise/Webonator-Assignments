@@ -8,7 +8,9 @@ public class DuplicateDemo {
 	public static void main(String[] args) {
 		String testString = "I came I saw I conquered I went";
 		DuplicateDemo demoObject = new DuplicateDemo();
-		System.out.println(demoObject.removeDuplicate(testString));
+		System.out.println("Original String: "+testString);
+		testString = demoObject.removeDuplicate(testString);
+		System.out.println("Updated String: "+testString);
 	}
 
 	String removeDuplicate(String givenString){

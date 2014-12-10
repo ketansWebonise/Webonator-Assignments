@@ -190,7 +190,7 @@ public class GetProgrammingLanguage {
 					attributeList.add(s);
 				}
 			}
-			System.out.println(arr);
+			System.out.println(attributeList);
 		}
 
 		else if (lang.equals("Java"))

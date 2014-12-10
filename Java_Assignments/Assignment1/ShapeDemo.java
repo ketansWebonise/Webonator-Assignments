@@ -6,12 +6,12 @@ public class ShapeDemo {
 	/**
 	 * @param args
 	 */
+	public static Scanner userInput= new Scanner(System.in);
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner userInput= new Scanner(System.in);
+		
 		System.out.print("\t\tPOLYGON MAPPER\nEnter the number of sides:");
 		int numberOfSides = userInput.nextInt();
-		userInput.close();
 		PolygonFactory myPolygonFactory = new PolygonFactory();
 		Polygon myPolygon = myPolygonFactory.getPolygon(numberOfSides);
 		if(myPolygon!=null)
@@ -59,15 +59,13 @@ abstract class Polygon{
 class Traingle extends Polygon{
 	
 	 int getPeremeter(){
-		 Scanner userInput = new Scanner(System.in);
 		 int perimeter=0;
 		 for(int count=0;count<3;count++)
 		 {
 			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=userInput.nextInt();
+			 int nextSide=ShapeDemo.userInput.nextInt();
 			 perimeter+=nextSide;
 		 }
-		 userInput.close();
 		 return perimeter;
 	 }
 	 
@@ -79,15 +77,13 @@ class Traingle extends Polygon{
  class Rectangle extends Polygon{
 		
 	 int getPeremeter(){
-		 Scanner userInput = new Scanner(System.in);
 		 int perimeter=0;
 		 for(int count=0;count<4;count++)
 		 {
 			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=userInput.nextInt();
+			 int nextSide=ShapeDemo.userInput.nextInt();
 			 perimeter+=nextSide;
 		 }
-		 userInput.close();
 		 return perimeter;
 	 }
 	 
@@ -99,15 +95,13 @@ class Traingle extends Polygon{
  class Pentagon extends Polygon{
 		
 	 int getPeremeter(){
-		 Scanner userInput = new Scanner(System.in);
 		 int perimeter=0;
 		 for(int count=0;count<5;count++)
 		 {
 			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=userInput.nextInt();
+			 int nextSide=ShapeDemo.userInput.nextInt();
 			 perimeter+=nextSide;
 		 }
-		 userInput.close();
 		 return perimeter;
 	 }
 	 
@@ -119,15 +113,13 @@ class Traingle extends Polygon{
  class Hexagon extends Polygon{
 		
 	 int getPeremeter(){
-		 Scanner userInput = new Scanner(System.in);
 		 int perimeter=0;
 		 for(int count=0;count<6;count++)
 		 {
 			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=userInput.nextInt();
+			 int nextSide=ShapeDemo.userInput.nextInt();
 			 perimeter+=nextSide;
 		 }
-		 userInput.close();
 		 return perimeter;
 	 }
 	 
@@ -139,15 +131,13 @@ class Traingle extends Polygon{
  class Heptagon extends Polygon{
 		
 	 int getPeremeter(){
-		 Scanner userInput = new Scanner(System.in);
 		 int perimeter=0;
 		 for(int count=0;count<7;count++)
 		 {
 			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=userInput.nextInt();
+			 int nextSide=ShapeDemo.userInput.nextInt();
 			 perimeter+=nextSide;
 		 }
-		 userInput.close();
 		 return perimeter;
 	 }
 	 
@@ -159,15 +149,13 @@ class Traingle extends Polygon{
  class Octagon extends Polygon{
 		
 	 int getPeremeter(){
-		 Scanner userInput = new Scanner(System.in);
 		 int perimeter=0;
 		 for(int count=0;count<8;count++)
 		 {
 			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=userInput.nextInt();
+			 int nextSide=ShapeDemo.userInput.nextInt();
 			 perimeter+=nextSide;
 		 }
-		 userInput.close();
 		 return perimeter;
 	 }
 	 
@@ -179,15 +167,13 @@ class Traingle extends Polygon{
  class Nonagon extends Polygon{
 		
 	 int getPeremeter(){
-		 Scanner userInput = new Scanner(System.in);
 		 int perimeter=0;
 		 for(int count=0;count<9;count++)
 		 {
 			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=userInput.nextInt();
+			 int nextSide=ShapeDemo.userInput.nextInt();
 			 perimeter+=nextSide;
 		 }
-		 userInput.close();
 		 return perimeter;
 	 }
 	 
@@ -199,15 +185,13 @@ class Traingle extends Polygon{
  class Decagon extends Polygon{
 		
 	 int getPeremeter(){
-		 Scanner userInput = new Scanner(System.in);
 		 int perimeter=0;
 		 for(int count=0;count<3;count++)
 		 {
 			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=userInput.nextInt();
+			 int nextSide=ShapeDemo.userInput.nextInt();
 			 perimeter+=nextSide;
 		 }
-		 userInput.close();
 		 return perimeter;
 	 }
 	 

@@ -20,7 +20,7 @@ public class DuplicateDemo {
 			StringTokenizer myTokenizer = new StringTokenizer(givenString);
 		
 			//retrieving all the unique words
-			LinkedHashSet<String> uniqueWordSet = new LinkedHashSet<>();
+			LinkedHashSet<String> uniqueWordSet = new LinkedHashSet<String>();
 			while(myTokenizer.hasMoreElements())
 			{
 				uniqueWordSet.add(myTokenizer.nextElement().toString());

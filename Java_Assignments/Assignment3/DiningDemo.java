@@ -1,10 +1,8 @@
 class Fork {
 	int forkId;
-	boolean acquired;
 
 	Fork(int id) {
 		this.forkId = id;
-		this.acquired = false;
 	}
 
 }
@@ -21,18 +19,11 @@ class Philosopher extends Thread {
 	}
 
 	void eat() {
-		synchronized (leftFork) {
+		synchronized (leftFork) {			// locking both the forks
 			synchronized (rightFork) {
 
-				// checks for both the forks
-				if (this.leftFork.acquired == false
-						&& this.rightFork.acquired == false)
-
-				{ // picking up both the forks
 					System.out.println(this.name + " pickes up left fork.");
-					this.leftFork.acquired = true;
 					System.out.println(this.name + " pickes up right fork.");
-					this.rightFork.acquired = true;
 
 					// starts to eat
 					System.out.println(this.name + " is Eating...");
@@ -44,14 +35,7 @@ class Philosopher extends Thread {
 					System.out.println(this.name + " is done Eating.");
 
 					// putting the forks down
-					this.leftFork.acquired = false;
-					this.rightFork.acquired = false;
 					System.out.println(this.name + " puts down the forks");
-				} else {
-					System.out
-							.println(this.name + "can't eat. So he thinks...");
-					this.think();
-				}
 			}
 		}
 	}
@@ -95,12 +79,11 @@ public class DiningDemo {
 		// setting main thread's priority so that all philosophers start together
 		Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
 		
-		// let the dining begin !!
+		//let the dining begin
 		P1.start();
 		P2.start();
 		P3.start();
 		P4.start();
 		P5.start();
-
 	}
 }

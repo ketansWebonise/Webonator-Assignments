@@ -14,10 +14,10 @@ class Philosopher extends Thread {
 	Fork leftFork;
 	Fork rightFork;
 
-	Philosopher(String name, Fork left, Fork right) {
+	Philosopher(String name, Fork forkOnLeft, Fork forkOnRight) {
 		this.name = name;
-		this.leftFork = left;
-		this.rightFork = right;
+		this.leftFork = forkOnLeft;
+		this.rightFork = forkOnRight;
 	}
 
 	void eat() {

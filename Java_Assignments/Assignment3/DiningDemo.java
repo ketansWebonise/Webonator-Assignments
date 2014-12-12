@@ -1,3 +1,7 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 class Fork {
 	int forkId;
 
@@ -70,20 +74,22 @@ public class DiningDemo {
 		Fork fork5 = new Fork(5);
 
 		// making the philosophers sit
-		Philosopher P1 = new Philosopher("Aristotle", fork1, fork2);
-		Philosopher P2 = new Philosopher("Plato", fork2, fork3);
-		Philosopher P3 = new Philosopher("Newton", fork3, fork4);
-		Philosopher P4 = new Philosopher("Einstien", fork4, fork5);
-		Philosopher P5 = new Philosopher("Aryabhatt", fork5, fork1);
+		List<Philosopher> greatMen = new LinkedList<Philosopher>();
+		greatMen.add(new Philosopher("Aristotle", fork1, fork2));
+		greatMen.add(new Philosopher("Plato", fork2, fork3));
+		greatMen.add(new Philosopher("Newton", fork3, fork4));
+		greatMen.add(new Philosopher("Einstien", fork4, fork5));
+		greatMen.add(new Philosopher("Aryabhatt", fork5, fork1));
 
 		// setting main thread's priority so that all philosophers start together
 		Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
 		
 		//let the dining begin
-		P1.start();
-		P2.start();
-		P3.start();
-		P4.start();
-		P5.start();
+		Iterator<Philosopher> myIterator = greatMen.iterator();
+		while(myIterator.hasNext())
+		{
+			myIterator.next().start();
+		}
+
 	}
 }

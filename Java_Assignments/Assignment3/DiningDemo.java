@@ -92,6 +92,9 @@ public class DiningDemo {
 		Philosopher P4 = new Philosopher("Einstien", fork4, fork5);
 		Philosopher P5 = new Philosopher("Aryabhatt", fork5, fork1);
 
+		// setting main thread's priority so that all philosophers start together
+		Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+		
 		// let the dining begin !!
 		P1.start();
 		P2.start();

@@ -31,7 +31,7 @@ public class MethodLister {
 			givenClass = Class.forName(passedName);
 
 		Method[] methods = givenClass.getDeclaredMethods();
-		
+		System.out.println("\tMETHODS:");
 		//listing out methods
 		for(int i=0;i<methods.length;i++)
 		System.out.println(methods[i].getName());

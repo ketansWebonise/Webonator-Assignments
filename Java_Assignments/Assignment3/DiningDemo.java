@@ -8,7 +8,6 @@ class Fork {
 	Fork(int id) {
 		this.forkId = id;
 	}
-
 }
 
 class Philosopher extends Thread {
@@ -90,6 +89,5 @@ public class DiningDemo {
 		{
 			myIterator.next().start();
 		}
-
 	}
 }

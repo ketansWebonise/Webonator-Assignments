@@ -1,15 +1,11 @@
 import java.util.Scanner;
 
 
-public class ShapeDemo {
-
-	/**
-	 * @param args
-	 */
+public class ShapeDemo
+{
 	public static Scanner userInput= new Scanner(System.in);
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+	public static void main(String[] args)
+	{
 		System.out.print("\t\tPOLYGON MAPPER\nEnter the number of sides:");
 		int numberOfSides = userInput.nextInt();
 		PolygonFactory myPolygonFactory = new PolygonFactory();
@@ -19,16 +15,19 @@ public class ShapeDemo {
 			System.out.println("Peremeter: "+myPolygon.getPeremeter());
 			System.out.println("AngleSum: "+myPolygon.getAngleSum());
 		}
-		else{
+		else
+		{
 			System.out.println("Please enter valid number of sides (3 to 10)");
-		}
-		
+		}	
 	}
 }
 
-class PolygonFactory {
-	Polygon getPolygon(int numberOfSides) {
-		switch (numberOfSides) {
+class PolygonFactory
+{
+	Polygon getPolygon(int numberOfSides)
+	{
+		switch (numberOfSides)
+		{
 		case 3:
 			return new Traingle();
 		case 4:
@@ -51,152 +50,177 @@ class PolygonFactory {
 	}
 }
 
-abstract class Polygon{
+abstract class Polygon
+{
 	abstract int getPeremeter();
 	abstract int getAngleSum();
 }
 
-class Traingle extends Polygon{
+class Traingle extends Polygon
+{
 	
-	 int getPeremeter(){
-		 int perimeter=0;
-		 for(int count=0;count<3;count++)
-		 {
-			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=ShapeDemo.userInput.nextInt();
-			 perimeter+=nextSide;
-		 }
-		 return perimeter;
-	 }
-	 
-	 int getAngleSum(){
-		 return 180;
-	 }
+	int getPeremeter()
+	{
+		int perimeter=0;
+		for(int count=0;count<3;count++)
+		{
+			System.out.print("Enter length of side "+(count+1)+": ");
+			int nextSide=ShapeDemo.userInput.nextInt();
+			perimeter+=nextSide;
+		}
+		return perimeter;
 	}
 
- class Rectangle extends Polygon{
-		
-	 int getPeremeter(){
-		 int perimeter=0;
-		 for(int count=0;count<4;count++)
-		 {
-			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=ShapeDemo.userInput.nextInt();
-			 perimeter+=nextSide;
-		 }
-		 return perimeter;
-	 }
-	 
-	 int getAngleSum(){
-		 return 360;
-	 }
+	int getAngleSum()
+	{
+		return 180;
 	}
+}
+
+class Rectangle extends Polygon
+{
+		
+	int getPeremeter()
+	{
+		int perimeter=0;
+		for(int count=0;count<4;count++)
+		{
+			System.out.print("Enter length of side "+(count+1)+": ");
+			int nextSide=ShapeDemo.userInput.nextInt();
+			perimeter+=nextSide;
+		}
+		return perimeter;
+	}
+	 
+	int getAngleSum()
+	{
+		return 360;
+	}
+}
  
- class Pentagon extends Polygon{
+class Pentagon extends Polygon
+{
 		
-	 int getPeremeter(){
-		 int perimeter=0;
-		 for(int count=0;count<5;count++)
-		 {
-			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=ShapeDemo.userInput.nextInt();
-			 perimeter+=nextSide;
-		 }
-		 return perimeter;
-	 }
-	 
-	 int getAngleSum(){
-		 return 540;
-	 }
+	int getPeremeter()
+	{
+		int perimeter=0;
+		for(int count=0;count<5;count++)
+		{
+			System.out.print("Enter length of side "+(count+1)+": ");
+			int nextSide=ShapeDemo.userInput.nextInt();
+			perimeter+=nextSide;
+		}
+		return perimeter;
 	}
+	 
+	int getAngleSum()
+	{
+		return 540;
+	}
+}
  
- class Hexagon extends Polygon{
+class Hexagon extends Polygon
+{
 		
-	 int getPeremeter(){
-		 int perimeter=0;
-		 for(int count=0;count<6;count++)
-		 {
-			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=ShapeDemo.userInput.nextInt();
-			 perimeter+=nextSide;
-		 }
-		 return perimeter;
-	 }
-	 
-	 int getAngleSum(){
-		 return 720;
-	 }
+	int getPeremeter()
+	{
+		int perimeter=0;
+		for(int count=0;count<6;count++)
+		{
+			System.out.print("Enter length of side "+(count+1)+": ");
+			int nextSide=ShapeDemo.userInput.nextInt();
+			perimeter+=nextSide;
+		}
+		return perimeter;
 	}
+	 
+	int getAngleSum()
+	{
+		return 720;
+	}
+}
  
- class Heptagon extends Polygon{
+class Heptagon extends Polygon
+{
 		
-	 int getPeremeter(){
-		 int perimeter=0;
-		 for(int count=0;count<7;count++)
-		 {
-			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=ShapeDemo.userInput.nextInt();
-			 perimeter+=nextSide;
-		 }
-		 return perimeter;
-	 }
-	 
-	 int getAngleSum(){
-		 return 900;
-	 }
+	int getPeremeter()
+	{
+		int perimeter=0;
+		for(int count=0;count<7;count++)
+		{
+			System.out.print("Enter length of side "+(count+1)+": ");
+			int nextSide=ShapeDemo.userInput.nextInt();
+			perimeter+=nextSide;
+		}
+		return perimeter;
 	}
+	 
+	int getAngleSum()
+	{
+		return 900;
+	}
+}
  
- class Octagon extends Polygon{
+class Octagon extends Polygon
+{
 		
-	 int getPeremeter(){
-		 int perimeter=0;
-		 for(int count=0;count<8;count++)
-		 {
-			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=ShapeDemo.userInput.nextInt();
-			 perimeter+=nextSide;
-		 }
-		 return perimeter;
-	 }
-	 
-	 int getAngleSum(){
-		 return 1080;
-	 }
+	int getPeremeter()
+	{
+		int perimeter=0;
+		for(int count=0;count<8;count++)
+		{
+			System.out.print("Enter length of side "+(count+1)+": ");
+			int nextSide=ShapeDemo.userInput.nextInt();
+			perimeter+=nextSide;
+		}
+		return perimeter;
 	}
+	 
+	int getAngleSum()
+	{
+		return 1080;
+	}
+}
  
- class Nonagon extends Polygon{
+class Nonagon extends Polygon
+{
 		
-	 int getPeremeter(){
-		 int perimeter=0;
-		 for(int count=0;count<9;count++)
-		 {
-			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=ShapeDemo.userInput.nextInt();
-			 perimeter+=nextSide;
-		 }
-		 return perimeter;
-	 }
-	 
-	 int getAngleSum(){
-		 return 1260;
-	 }
+	int getPeremeter()
+	{
+		int perimeter=0;
+		for(int count=0;count<9;count++)
+		{
+			System.out.print("Enter length of side "+(count+1)+": ");
+			int nextSide=ShapeDemo.userInput.nextInt();
+			perimeter+=nextSide;
+		}
+		return perimeter;
 	}
+	 
+	int getAngleSum()
+	{
+		return 1260;
+	}
+}
  
- class Decagon extends Polygon{
+class Decagon extends Polygon 
+{
 		
-	 int getPeremeter(){
-		 int perimeter=0;
-		 for(int count=0;count<3;count++)
-		 {
-			 System.out.print("Enter length of side "+(count+1)+": ");
-			 int nextSide=ShapeDemo.userInput.nextInt();
-			 perimeter+=nextSide;
-		 }
-		 return perimeter;
-	 }
-	 
-	 int getAngleSum(){
-		 return 1440;
-	 }
+	int getPeremeter()
+	{
+		int perimeter=0;
+		for(int count=0;count<3;count++)
+		{
+			System.out.print("Enter length of side "+(count+1)+": ");
+			int nextSide=ShapeDemo.userInput.nextInt();
+			perimeter+=nextSide;
+		}
+		return perimeter;
 	}
+	 
+	int getAngleSum()
+	{
+		return 1440;
+	}
+}
  
